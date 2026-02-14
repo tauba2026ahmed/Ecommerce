@@ -154,7 +154,7 @@
 #concepts .boxes .box {
     max-width: 200px;
     height: 300px;
-    background-color: #DACBB2;
+    background-color: #ddd;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,13 +198,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
     flex-wrap: wrap;
     width: 100%;
+    gap: 20px;
 }
 
 #products .product-list .product {
-    max-width: 25%;
+    max-width: calc(25% - 20px);
     height: 350px;
     background-color: #fff;
     display: flex;
@@ -213,14 +213,14 @@
     align-items: flex-start;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
     padding: 20px;
-    position: relative;
     border: 1px solid #DACBB2;
     position: relative;
     transition: 0.3s ease;
 }
 
+
 #products .product-list .product img {
-    height: 70%; 
+    min-height: 70%; 
     width: 100%;
 }
 
@@ -267,6 +267,52 @@
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
 }
 
+#banner {
+    background-image: url("img/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+}
+
+#banner h4 {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#banner p {
+    font-size: 25px;
+    padding: 10px;
+}
+
+#banner p span {
+    color: #143509;
+    font-weight: 900;
+}
+
+
+#banner button {
+    font-size: 20px;
+    padding: 10px 20px;
+    width: 25%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+    width: auto;
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+
+#banner button:hover {
+    background-color: #667B32;
+    color: #fff;
+}
 
 
 @media (max-width: 800px) {
@@ -330,11 +376,11 @@
 
     /* Products Style */
     #products {
-        padding: 50px 50px;
+        padding: 50px 100px;
     }
 
     #products .product-list .product {
-        max-width: 50%;
+        min-width: 45%;
     }
 }
 
@@ -390,6 +436,18 @@
     #products .product-list {
         flex-direction: column;
         align-items: center;
+    }
+
+    #banner p {
+        font-size: 19px;
+    }
+
+    #banner button {
+        background-color: #667B32;
+    }
+
+    #banner button::hover {
+        background-color: #99c134;
     }
 
     
