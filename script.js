@@ -27,7 +27,7 @@ close.addEventListener("click", () => {
 
 const navbarEle = document.querySelectorAll("#navbar a");
 
-const currentPage = window.location.pathname.split("/");
+const currentPage = window.location.pathname.split("/").pop();
 
 console.log(currentPage)
 

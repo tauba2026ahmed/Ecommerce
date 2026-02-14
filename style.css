@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 /* Header Style */
@@ -140,6 +139,44 @@
     color: #143509;
 }
 
+#concepts {
+    padding: 50px 100px;
+}
+
+#concepts .boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#concepts .boxes .box {
+    max-width: 200px;
+    height: 300px;
+    background-color: #DACBB2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+#concepts .boxes .box img {
+    height: 70%; 
+    width: 100%;
+}
+
+#concepts .boxes .box h2 {
+    font-size: 15px;
+    color: #143509;
+    padding: 10px;
+    font-weight: 900;
+    background-color: #8C86AA;
+    margin-top: 10px;
+}
+
 
 @media (max-width: 800px) {
     /* Header */
@@ -157,6 +194,7 @@
         padding: 10px 50px;
         width: 250px;
         transition: 0.3s ease;
+        flex-direction: column;
     }
 
     #navbar a {
@@ -190,6 +228,13 @@
     #header-info {
         justify-content: flex-start;
         padding-top: 30px;
+    }
+
+    /* Concepts Style */
+    #concepts .boxes .box {
+        max-width: 150px;
+        height: 200px;
+        padding: 10px;
     }
 
 
@@ -230,5 +275,10 @@
         color: #fff;
     }
 
+    /* Concepts Style */
+    #concepts {
+    padding: 30px 30px;
+    }
 
+    
 }
