@@ -177,6 +177,97 @@
     margin-top: 10px;
 }
 
+#products {
+    padding: 50px 100px;
+    text-align: center;
+}
+
+#products h1 {
+    font-size: 30px;
+    color: #143509;
+    margin-bottom: 10px;
+}
+
+#products p {
+    font-size: 15px;
+    color: #143509;
+    margin-bottom: 30px;
+}
+
+#products .product-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#products .product-list .product {
+    max-width: 25%;
+    height: 350px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    position: relative;
+    border: 1px solid #DACBB2;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+#products .product-list .product img {
+    height: 70%; 
+    width: 100%;
+}
+
+#products .product-list .product span {
+    font-size: 15px;
+    color: #143509;
+    margin-top: 10px;
+}
+
+#products .product-list .product h2 {
+    font-size: 20px;
+    color: #143509;
+    padding: 5px 0;
+    font-weight: 900;
+}
+
+#products .product-list .product .stars {
+    display: flex;
+    color: #667B32;   
+}
+
+#products .product-list .product p {
+    color: #143509;
+    margin-top: 10px;
+}
+
+#products .product-list .product .basket {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #143509;
+    cursor: pointer;
+    background-color: #667B32;
+    padding: 10px 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#products .product-list .product:hover,
+#concepts .boxes .box:hover
+ {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+
 
 @media (max-width: 800px) {
     /* Header */
@@ -237,7 +328,14 @@
         padding: 10px;
     }
 
+    /* Products Style */
+    #products {
+        padding: 50px 50px;
+    }
 
+    #products .product-list .product {
+        max-width: 50%;
+    }
 }
 
 @media (max-width: 400px) {
@@ -278,6 +376,20 @@
     /* Concepts Style */
     #concepts {
     padding: 30px 30px;
+    }
+
+    /* Products Style */
+    #products {
+        padding: 50px 30px;
+    }
+
+    #products .product-list .product {
+        max-width: 100%;
+    }
+
+    #products .product-list {
+        flex-direction: column;
+        align-items: center;
     }
 
     
