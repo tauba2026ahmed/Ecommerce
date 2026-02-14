@@ -177,24 +177,28 @@
     margin-top: 10px;
 }
 
-#products {
+#products, 
+#new-arrivals {
     padding: 50px 100px;
     text-align: center;
 }
 
-#products h1 {
+#products h1,
+#new-arrivals h1 {
     font-size: 30px;
     color: #143509;
     margin-bottom: 10px;
 }
 
-#products p {
+#products p,
+#new-arrivals p {
     font-size: 15px;
     color: #143509;
     margin-bottom: 30px;
 }
 
-#products .product-list {
+#products .product-list,
+#new-arrivals .product-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -203,7 +207,8 @@
     gap: 20px;
 }
 
-#products .product-list .product {
+#products .product-list .product,
+#new-arrivals .product-list .product {
     max-width: calc(25% - 20px);
     height: 350px;
     background-color: #fff;
@@ -219,35 +224,41 @@
 }
 
 
-#products .product-list .product img {
+#products .product-list .product img,
+#new-arrivals .product-list .product img {
     min-height: 70%; 
     width: 100%;
 }
 
-#products .product-list .product span {
+#products .product-list .product span,
+#new-arrivals .product-list .product span {
     font-size: 15px;
     color: #143509;
     margin-top: 10px;
 }
 
-#products .product-list .product h2 {
+#products .product-list .product h2,
+#new-arrivals .product-list .product h2 {
     font-size: 20px;
     color: #143509;
     padding: 5px 0;
     font-weight: 900;
 }
 
-#products .product-list .product .stars {
+#products .product-list .product .stars,
+#new-arrivals .product-list .product .stars {
     display: flex;
     color: #667B32;   
 }
 
-#products .product-list .product p {
+#products .product-list .product p,
+#new-arrivals .product-list .product p {
     color: #143509;
     margin-top: 10px;
 }
 
-#products .product-list .product .basket {
+#products .product-list .product .basket,
+#new-arrivals .product-list .product .basket {
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -262,8 +273,8 @@
 }
 
 #products .product-list .product:hover,
-#concepts .boxes .box:hover
- {
+#concepts .boxes .box:hover,
+#new-arrivals .product-list .product:hover{
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
 }
 
@@ -375,11 +386,13 @@
     }
 
     /* Products Style */
-    #products {
+    #products,
+    #new-arrivals {
         padding: 50px 100px;
     }
 
-    #products .product-list .product {
+    #products .product-list .product,
+    #new-arrivals .product-list .product {
         min-width: 45%;
     }
 }
@@ -425,15 +438,18 @@
     }
 
     /* Products Style */
-    #products {
+    #products,
+    #new-arrivals {
         padding: 50px 30px;
     }
 
-    #products .product-list .product {
+    #products .product-list .product,
+    #new-arrivals .product-list .product {
         max-width: 100%;
     }
 
-    #products .product-list {
+    #products .product-list,
+    #new-arrivals .product-list {
         flex-direction: column;
         align-items: center;
     }
