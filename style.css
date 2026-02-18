@@ -19,6 +19,9 @@
     position: sticky;
     width: 100%;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+    top: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 #navbar {
@@ -307,7 +310,9 @@
 }
 
 
-#banner button {
+#banner button, 
+#deals .deal1 button,
+#deals .deal2 button {
     font-size: 20px;
     padding: 10px 20px;
     width: 25%;
@@ -320,9 +325,244 @@
     border-radius: 10px;
 }
 
-#banner button:hover {
+#banner button:hover,
+#deals .deal1 button:hover,
+#deals .deal2 button:hover {
     background-color: #667B32;
     color: #fff;
+}
+
+/* Deals Style */
+#deals,
+#deals2 {
+    padding: 50px 100px;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+#deals .deal1,
+#deals .deal2,
+#deals2 .deal2-1,
+#deals2 .deal2-2,
+#deals2 .deal2-3 {
+    background-image: url("img/deal1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #fff;
+    padding: 100px 20px;
+    width: calc(50% - 20px);
+    background-position: center;
+}
+
+#deals2 {
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#deals2 .deal2-3,
+#deals2 .deal2-1,
+#deals2 .deal2-2 {
+    width: calc(30% - 20px);
+}
+
+#deals .deal2,
+#deals2 .deal2-3 {
+    background-image: url("img/deal2.jpg");
+}
+
+#deals2 .deal2-2 {
+    background-image: url("img/deal3.jpg");
+    position: relative;
+}
+
+#deals2 .deal2-2 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 100px 20px;
+}
+
+#deals2 .deal2-1 h1,
+#deals2 .deal2-2 h1,
+#deals2 .deal2-3 h1 {
+    color: red;
+    line-height: 1.2;
+}
+
+#deals2 .deal2-1 p,
+#deals2 .deal2-2 p,
+#deals2 .deal2-3 p {
+    color: #fff;
+    font-weight: 900;
+}
+
+
+#deals .deal1 h2,
+#deals .deal2 h2 {
+    font-size: 20px;
+    padding: 10px;
+    color: red;
+    font-weight: 900;
+}
+
+#deals .deal1 p,
+#deals .deal2 p {
+    font-size: 15px;
+    padding: 10px;
+}
+
+#banner2 {
+    background-image: url("img/banner2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+}
+
+#banner2 .text {
+    width: 60%;
+    padding-left: 50px;
+}
+
+#banner2 .text h2 {
+    font-size: 30px;
+}
+
+#banner2 .text p {
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+#banner2 .text p span {
+    color: #667B32;
+    font-weight: 900;
+}
+
+#banner2 .form {
+    display: flex;
+}
+
+#banner2 .form {
+    width: 40%;
+    padding-right: 20px;
+}
+
+#banner2 .form input {
+    padding: 15px;
+    width: 80%;
+    border: none;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+}
+
+#banner2 .form button {
+    padding: 15px;
+    width: 15%;
+    border: none;
+    background-color: #667B32;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border-radius: 0 10px 10px 0;
+}
+
+#banner2 .form button:hover {
+    background-color: #99c134;
+}
+
+/* Footer Style */
+
+#footer {
+    background-color: #DACBB2;
+    padding: 50px 100px 0;
+    display: flex;
+}
+
+#footer .cols {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#footer .cols .col {
+    max-width: calc((100% / 4) - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#footer .cols .col a {
+    text-decoration: none;
+    color: #143509;
+}
+
+#footer .cols .col * {
+    padding: 10px;
+}
+
+#footer .cols .col p {
+    width: 100%;
+    white-space: nowrap;
+}
+
+#footer .cols .col:nth-child(5) {
+    /* display: block; */
+    min-width: 100%;
+    text-align: center;
+}
+
+.eco {
+    width: 80px;
+    height: 80px;
+}
+
+.payment-img {
+    width: 100%;
+    max-height: 70px;
+}
+
+.app-store, .play-store {
+    width: calc(100% / 2 - 10px);
+    max-height: 70px;
+}
+
+.play-store {
+    max-height: 50px;
+}
+
+/* Shop page */
+#shop-info {
+    background-image: url("img/shop/shop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #DACBB2;
+}
+
+#shop-info h3 {
+    font-size: 15px;
+    padding-top: 5px;
 }
 
 
@@ -395,6 +635,70 @@
     #new-arrivals .product-list .product {
         min-width: 45%;
     }
+
+    /* Deals Style */
+    #deals {
+        flex-direction: column;
+        gap: 0;
+        padding: 50px 50px;
+    }
+
+    #deals .deal1, 
+    #deals .deal2 {
+        width: 100%;
+    }
+
+    #deals2 {
+        padding: 50px 50px;
+        gap: 10px;
+    }
+
+    #deals2 * {
+        min-width: calc(33.5%);
+    }
+
+    #deals2 * p{
+        padding-top: 5px;
+    }
+
+    /* Banner2 Style */
+    #banner2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #banner2 .text {
+        width: 70%;
+    }
+
+    #banner2 .form {
+        width: 70%;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* Footer Style */
+
+    #footer {
+        padding: 50px 50px 0;
+    }
+
+    #footer .cols {
+        gap: 10px;
+    }
+
+    #footer .cols .col {
+    max-width: calc((100% / 3) - 10px);
+    }
+
+    #footer .cols .col p {
+        white-space: wrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.4;
+    }
 }
 
 @media (max-width: 400px) {
@@ -466,5 +770,52 @@
         background-color: #99c134;
     }
 
-    
+    /* Deals2 Style */
+    #deals2 {
+        flex-direction: column;
+        padding: 20px 50px;
+    }
+
+    #deals2 * {
+        min-width: 100%;
+    }
+
+    #banner2 {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #banner2 .text {
+        width: 100%;
+        padding: 20px 20px;
+    }
+
+    #banner2 .form {
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    #banner2 .form input {
+        width: 70%;
+    }
+
+     #banner2 .form button {
+        width: 25%;
+    }
+
+    /* Footer Style */
+
+    #footer {
+         padding: 30px 30px 0;
+    }
+
+    #footer .cols {
+        gap: 20px;
+    }
+
+    #footer .cols .col {
+    max-width: calc((100% / 2) - 20px);
+    }
 }
