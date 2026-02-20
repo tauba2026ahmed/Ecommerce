@@ -547,7 +547,8 @@
 
 /* Shop page */
 #shop-info,
-#blog-info {
+#blog-info,
+#contact-info {
   background-image: url("img/shop/shop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -557,6 +558,11 @@
   justify-content: center;
   align-items: center;
   color: #dacbb2;
+}
+
+#contact-info {
+  background-image: url("img/shop/shop.jpg");
+  color: red;
 }
 
 #blog-info {
@@ -848,6 +854,104 @@
 }
 
 
+/* Contact Style */
+.address {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #143509;
+  padding: 50px 100px;
+}
+
+.map {
+  width: 50%;
+  height: 300px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.address .text {
+  width: 50%;
+}
+
+.address .text * {
+  margin-bottom: 20px;
+}
+
+.row .col {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#contact-form {
+
+  padding: 20px;
+}
+
+#contact-form .container {
+  display: flex;
+  padding: 50px 100px;
+  gap: 20px;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+}
+
+#contact-form .text-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+  align-items: center;
+}
+
+#contact-form .text-inputs input,
+#contact-form .text-inputs textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#contact-form .text-inputs .contact-btn {
+  width: 20%;
+  padding: 15px;
+  border: none;
+  background-color: #667b32;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 10px;
+}
+
+.contact-people .person{
+  display: flex;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.person-image {
+  width: 70px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+
+.person-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#contact-form .contact-people .person .text * {
+  margin-bottom: 10px;
+}
+
+
 @media (max-width: 800px) {
   /* Header */
   #header .logo a img {
@@ -979,6 +1083,17 @@
     justify-content: center;
     align-items: center;
     line-height: 1.4;
+  }
+
+  /* Contact Style */
+  .address {
+    gap: 20px;
+    padding: 30px 50px;
+  }
+
+  #contact-form .container {
+
+    padding: 50px;
   }
 }
 
@@ -1132,6 +1247,40 @@
 
   .app-install {
     padding: 20px 20px;
+  }
+
+  /* Contact Style */
+  .address {
+    gap: 20px;
+    padding: 30px 50px;
+    flex-direction: column;
+  }
+
+  .map {
+    width: 100%;
+    height: 300px;
+  }
+
+  .address .text {
+    width: 100%;
+  }
+
+  #contact-form .container {
+    flex-direction: column;
+    padding: 20px 30px;
+    gap: 30px;
+  }
+
+  #contact-form .text-inputs {
+    width: 100%;
+  }
+
+  #contact-form .text-inputs .contact-btn {
+    width: 50%;
+  }
+
+  #contact-form .text-inputs .contact-people{
+    width: 100%;
   }
 
 }
