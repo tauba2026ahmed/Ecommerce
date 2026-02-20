@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=League+Spartan:100,200,300,regular,500,600,700,800,900);
 
+
+
 * {
     font-family: "League Spartan", sans-serif;
     margin: 0;
@@ -201,7 +203,8 @@
 }
 
 #products .product-list,
-#new-arrivals .product-list {
+#new-arrivals .product-list,
+#new-arrivals .product-list.active {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -280,6 +283,8 @@
 #new-arrivals .product-list .product:hover{
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
 }
+
+/* Banner Style */
 
 #banner {
     background-image: url("img/banner.jpg");
@@ -564,6 +569,134 @@
     font-size: 15px;
     padding-top: 5px;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    background-color: #DACBB2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+#new-arrivals {
+        position: relative;
+        overflow: hidden;
+        padding: 50px 100px;
+        background-color: #f7f7f7;
+    }
+
+    #new-arrivals h1 {
+        margin: 0 0 10px;
+    }
+
+    #new-arrivals p {
+        margin: 0 0 20px;
+        color: #555;
+    }
+
+    /* كل product-list يكون فوق بعض */
+    #new-arrivals .product-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    /* العنصر النشط */
+    #new-arrivals .product-list.active {
+        transform: translateX(0);
+        opacity: 1;
+        position: relative; 
+    }
+
+    /* تصميم المنتجات */
+    .product {
+        flex: 1 1 calc(25% - 20px);
+        background: #fff;
+        padding: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .product img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .stars i {
+        color: gold;
+        margin-right: 2px;
+    }
+
+    .product span {
+        display: block;
+        color: #888;
+        margin: 5px 0;
+    }
+
+    .product h2 {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .product p {
+        font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .basket {
+        color: #333;
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+    /* الأزرار */
+    .buttons {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        background-color: #DACBB2;
+        cursor: pointer;
+        border-radius: 4px;
+        user-select: none;
+    }
+
+    .btn.active {
+        background-color: #bfa387;
+        color: #fff;
+    }
+
+    .btn-next {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+
 
 
 @media (max-width: 800px) {

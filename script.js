@@ -36,3 +36,37 @@ navbarEle.forEach((link) => {
         link.classList.add("active");
     }
 } )
+
+
+const lists = document.querySelectorAll("#new-arrivals .product-list");
+    const buttons = document.querySelectorAll("#new-arrivals .btn");
+    const nextBtn = document.querySelector("#new-arrivals .btn-next");
+    let current = 0;
+
+    // زرار رقم 1 و 2
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const index = parseInt(btn.dataset.index);
+
+            lists.forEach((list, i) => {
+                list.classList.toggle("active", i === index);
+            });
+
+            buttons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            current = index;
+        });
+    });
+
+    // زرار Next
+    nextBtn.addEventListener("click", () => {
+        lists[current].classList.remove("active");
+        buttons[current].classList.remove("active");
+
+        current = (current + 1) % lists.length;
+        console.log(current);
+
+        lists[current].classList.add("active");
+        buttons[current].classList.add("active");
+    });
